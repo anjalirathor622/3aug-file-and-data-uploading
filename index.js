@@ -11,7 +11,7 @@ env.config();
 
 async function main(resolve, reject) {
 
-   return await mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASS}@cluster0.bmcybml.${process.env.DATABASE}.net/?retryWrites=true&w=majority`)
+   return await mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASS}${process.env.CLUSTER}.bmcybml.${process.env.DATABASE}.net/?retryWrites=true&w=majority`)
 
 }
 main().then((d)=>{
